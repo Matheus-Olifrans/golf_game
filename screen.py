@@ -14,9 +14,11 @@ def show(ballpos):
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
-
+try:
     pixels[floor(ballpos[1])][floor(ballpos[0])] = 1
     draw(pixels)
+except IndexError:
+    pass
 
 
 def draw(pixels):
